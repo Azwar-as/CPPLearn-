@@ -1,6 +1,34 @@
 #include <iostream>
 using namespace std;
 
+int linearSearch(int arr[], int n, int target)
+{
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == target)
+            return i; // kembalikan indeks saat ditemukan
+    }
+    return -1; // tidak ditemukan
+}
+int binarySearch(int arr[], int n, int target)
+{
+    int left = 0, right = n - 1;
+
+    while (left <= right)
+    {
+        int mid = (left + right) / 2;
+
+        if (arr[mid] == target)
+            return mid; // ditemukan
+        else if (arr[mid] < target)
+            left = mid + 1;
+        else
+            right = mid - 1;
+    }
+
+    return -1; // tidak ditemukan
+}
+
 struct node
 {
     int nilai;
