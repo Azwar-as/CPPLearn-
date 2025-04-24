@@ -2,8 +2,6 @@
 
 using namespace std;
 
-// JAVIER GAVRA ABHINAYA
-// A11.2024.15771
 
 class LinkedList
 {
